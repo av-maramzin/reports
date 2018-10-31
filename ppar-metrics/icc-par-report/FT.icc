@@ -1,1 +1,1061 @@
 Benchmark: FT
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: disabled
+  -inline-max-per-compile: disabled
+
+
+Begin optimization report for: verify(int, int, int, int, logical *, char *)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (verify(int, int, int, int, logical *, char *)) [1] /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(703,1)
+  -> INLINE: (871,13) dcmplx_div(dcomplex, dcomplex)
+  -> INLINE: (871,13) dcmplx_div(dcomplex, dcomplex)
+  -> INLINE: (871,13) dcmplx_div(dcomplex, dcomplex)
+  -> INLINE: (871,13) dcmplx_div(dcomplex, dcomplex)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(870,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria   [ /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(873,7) ]
+LOOP END
+===========================================================================
+
+Begin optimization report for: timer_stop(int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (timer_stop(int)) [2] /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c(57,1)
+  -> INLINE: (60,11) elapsed_time(void)
+    -> INLINE: (22,5) wtime_(double *)
+
+===========================================================================
+
+Begin optimization report for: cfftz(int, int, int, dcomplex (*)[*], dcomplex (*)[*])
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (cfftz(int, int, int, dcomplex (*)[*], dcomplex (*)[*])) [3] /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(577,1)
+  -> INLINE: (594,5) fftz2(int, int, int, int, int, int, dcomplex *, dcomplex (*)[*], dcomplex (*)[*])
+  -> INLINE: (606,5) fftz2(int, int, int, int, int, int, dcomplex *, dcomplex (*)[*], dcomplex (*)[*])
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(629,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(594,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed ANTI dependence between u[li+i] (635:12) and y[i22+k][j] (648:23)
+
+   LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(643,5) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(594,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+      remark #15346: vector dependence: assumed ANTI dependence between x[i11+k][j] (645:15) and y[i22+k][j] (648:23)
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(644,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(594,5)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+         remark #15346: vector dependence: assumed ANTI dependence between x[i11+k][j] (645:15) and y[i22+k][j] (648:23)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(629,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(606,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed ANTI dependence between u[li+i] (635:12) and x[i22+k][j] (648:23)
+
+   LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(643,5) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(606,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+      remark #15346: vector dependence: assumed ANTI dependence between y[i11+k][j] (645:15) and x[i22+k][j] (648:23)
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(644,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(606,5)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+         remark #15346: vector dependence: assumed ANTI dependence between y[i11+k][j] (645:15) and x[i22+k][j] (648:23)
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(599,7)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed FLOW dependence between x[j][i] (601:21) and x[j][i] (601:21)
+
+   LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(600,9)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+      remark #15346: vector dependence: assumed FLOW dependence between x[j][i] (601:21) and x[j][i] (601:21)
+   LOOP END
+LOOP END
+
+
+Non-optimizable loops:
+
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(593,3)
+   remark #15522: loop was not vectorized: loop control flow is too complex. Try using canonical loop form from OpenMP specification
+   remark #17102: loop was not parallelized: not a parallelization candidate
+LOOP END
+===========================================================================
+
+Begin optimization report for: fft..1(int, dcomplex *, dcomplex *)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (fft..1(int, dcomplex *, dcomplex *)) [4] /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(423,1)
+  CLONED FROM: fft(int, dcomplex *, dcomplex *)(-1,X,X)
+  -> INLINE: (425,5) cffts1(int, int, int, int, void *, void *)
+    -> INLINE: (444,11) ilog2(int)
+    -> INLINE: (446,23) timer_start(int)
+      -> INLINE: /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c:(49,16) elapsed_time(void)
+        -> INLINE: (22,5) wtime_(double *)
+    -> (456,7) cfftz(int, int, int, dcomplex (*)[*], dcomplex (*)[*])
+    -> (465,23) timer_stop(int)
+  -> INLINE: (426,5) cffts2(int, int, int, int, void *, void *)
+    -> INLINE: (477,11) ilog2(int)
+    -> INLINE: (479,23) timer_start(int)
+      -> INLINE: /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c:(49,16) elapsed_time(void)
+        -> INLINE: (22,5) wtime_(double *)
+    -> (489,7) cfftz(int, int, int, dcomplex (*)[*], dcomplex (*)[*])
+    -> (498,23) timer_stop(int)
+  -> INLINE: (427,5) cffts3(int, int, int, int, void *, void *)
+    -> INLINE: (510,11) ilog2(int)
+    -> INLINE: (512,23) timer_start(int)
+      -> INLINE: /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c:(49,16) elapsed_time(void)
+        -> INLINE: (22,5) wtime_(double *)
+    -> (522,7) cfftz(int, int, int, dcomplex (*)[*], dcomplex (*)[*])
+    -> (531,23) timer_stop(int)
+  -> INLINE: (429,5) cffts3(int, int, int, int, void *, void *)
+    -> INLINE: (510,11) ilog2(int)
+    -> INLINE: (512,23) timer_start(int)
+      -> INLINE: /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c:(49,16) elapsed_time(void)
+        -> INLINE: (22,5) wtime_(double *)
+    -> (522,7) cfftz(int, int, int, dcomplex (*)[*], dcomplex (*)[*])
+    -> (531,23) timer_stop(int)
+  -> INLINE: (430,5) cffts2(int, int, int, int, void *, void *)
+    -> INLINE: (477,11) ilog2(int)
+    -> INLINE: (479,23) timer_start(int)
+      -> INLINE: /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c:(49,16) elapsed_time(void)
+        -> INLINE: (22,5) wtime_(double *)
+    -> (489,7) cfftz(int, int, int, dcomplex (*)[*], dcomplex (*)[*])
+    -> (498,23) timer_stop(int)
+  -> INLINE: (431,5) cffts1(int, int, int, int, void *, void *)
+    -> INLINE: (444,11) ilog2(int)
+    -> INLINE: (446,23) timer_start(int)
+      -> INLINE: /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c:(49,16) elapsed_time(void)
+        -> INLINE: (22,5) wtime_(double *)
+    -> (456,7) cfftz(int, int, int, dcomplex (*)[*], dcomplex (*)[*])
+    -> (465,23) timer_stop(int)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(661,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(429,5)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+   remark #15523: loop was not vectorized: loop control variable lg was found, but loop iteration count cannot be computed before executing the loop
+   remark #25456: Number of Array Refs Scalar Replaced In Loop: 1
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(514,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(429,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed ANTI dependence between ty1[k][i] (518:23) and x1[k][j][i+ii] (526:30)
+
+   LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(515,5) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(429,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+      remark #15346: vector dependence: assumed ANTI dependence between ty1[k][i] (518:23) and x1[k][j][i+ii] (526:30)
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(516,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(429,5)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+         remark #15346: vector dependence: assumed FLOW dependence between ty1[k][i] (518:23) and ty1[k][i] (518:23)
+
+         LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(517,9) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(429,5)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+            remark #15346: vector dependence: assumed FLOW dependence between ty1[k][i] (518:23) and ty1[k][i] (518:23)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(524,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(429,5)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+         remark #15346: vector dependence: assumed FLOW dependence between x1[k][j][i+ii] (526:30) and x1[k][j][i+ii] (526:30)
+
+         LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(525,9) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(429,5)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+            remark #15346: vector dependence: assumed FLOW dependence between x1[k][j][i+ii] (526:30) and x1[k][j][i+ii] (526:30)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(661,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(430,5)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+   remark #15523: loop was not vectorized: loop control variable lg was found, but loop iteration count cannot be computed before executing the loop
+   remark #25456: Number of Array Refs Scalar Replaced In Loop: 1
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(481,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(430,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed ANTI dependence between ty1[j][i] (485:23) and x1[k][j][i+ii] (493:30)
+
+   LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(482,5) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(430,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+      remark #15346: vector dependence: assumed ANTI dependence between ty1[j][i] (485:23) and x1[k][j][i+ii] (493:30)
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(483,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(430,5)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+         remark #15346: vector dependence: assumed FLOW dependence between ty1[j][i] (485:23) and ty1[j][i] (485:23)
+
+         LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(484,9) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(430,5)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+            remark #15346: vector dependence: assumed FLOW dependence between ty1[j][i] (485:23) and ty1[j][i] (485:23)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(491,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(430,5)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+         remark #15346: vector dependence: assumed FLOW dependence between x1[k][j][i+ii] (493:30) and x1[k][j][i+ii] (493:30)
+
+         LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(492,9) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(430,5)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+            remark #15346: vector dependence: assumed FLOW dependence between x1[k][j][i+ii] (493:30) and x1[k][j][i+ii] (493:30)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(661,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(431,5)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+   remark #15523: loop was not vectorized: loop control variable lg was found, but loop iteration count cannot be computed before executing the loop
+   remark #25456: Number of Array Refs Scalar Replaced In Loop: 1
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(448,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(431,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed ANTI dependence between ty1[i][j] (452:23) and x2[k][j+jj][i] (460:30)
+
+   LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(449,5) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(431,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+      remark #15346: vector dependence: assumed ANTI dependence between ty1[i][j] (452:23) and x2[k][j+jj][i] (460:30)
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(450,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(431,5)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+         remark #15346: vector dependence: assumed FLOW dependence between ty1[i][j] (452:23) and ty1[i][j] (452:23)
+
+         LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(451,9) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(431,5)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+            remark #15346: vector dependence: assumed FLOW dependence between ty1[i][j] (452:23) and ty1[i][j] (452:23)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(458,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(431,5)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+         remark #15346: vector dependence: assumed FLOW dependence between x2[k][j+jj][i] (460:30) and x2[k][j+jj][i] (460:30)
+
+         LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(459,9) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(431,5)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+            remark #15346: vector dependence: assumed FLOW dependence between x2[k][j+jj][i] (460:30) and x2[k][j+jj][i] (460:30)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: fft..0(int, dcomplex *, dcomplex *)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (fft..0(int, dcomplex *, dcomplex *)) [5] /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(423,1)
+  CLONED FROM: fft(int, dcomplex *, dcomplex *)(1,X,X)
+  -> INLINE: (425,5) cffts1(int, int, int, int, void *, void *)
+    -> INLINE: (444,11) ilog2(int)
+    -> INLINE: (446,23) timer_start(int)
+      -> INLINE: /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c:(49,16) elapsed_time(void)
+        -> INLINE: (22,5) wtime_(double *)
+    -> (456,7) cfftz(int, int, int, dcomplex (*)[*], dcomplex (*)[*])
+    -> (465,23) timer_stop(int)
+  -> INLINE: (426,5) cffts2(int, int, int, int, void *, void *)
+    -> INLINE: (477,11) ilog2(int)
+    -> INLINE: (479,23) timer_start(int)
+      -> INLINE: /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c:(49,16) elapsed_time(void)
+        -> INLINE: (22,5) wtime_(double *)
+    -> (489,7) cfftz(int, int, int, dcomplex (*)[*], dcomplex (*)[*])
+    -> (498,23) timer_stop(int)
+  -> INLINE: (427,5) cffts3(int, int, int, int, void *, void *)
+    -> INLINE: (510,11) ilog2(int)
+    -> INLINE: (512,23) timer_start(int)
+      -> INLINE: /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c:(49,16) elapsed_time(void)
+        -> INLINE: (22,5) wtime_(double *)
+    -> (522,7) cfftz(int, int, int, dcomplex (*)[*], dcomplex (*)[*])
+    -> (531,23) timer_stop(int)
+  -> INLINE: (429,5) cffts3(int, int, int, int, void *, void *)
+    -> INLINE: (510,11) ilog2(int)
+    -> INLINE: (512,23) timer_start(int)
+      -> INLINE: /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c:(49,16) elapsed_time(void)
+        -> INLINE: (22,5) wtime_(double *)
+    -> (522,7) cfftz(int, int, int, dcomplex (*)[*], dcomplex (*)[*])
+    -> (531,23) timer_stop(int)
+  -> INLINE: (430,5) cffts2(int, int, int, int, void *, void *)
+    -> INLINE: (477,11) ilog2(int)
+    -> INLINE: (479,23) timer_start(int)
+      -> INLINE: /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c:(49,16) elapsed_time(void)
+        -> INLINE: (22,5) wtime_(double *)
+    -> (489,7) cfftz(int, int, int, dcomplex (*)[*], dcomplex (*)[*])
+    -> (498,23) timer_stop(int)
+  -> INLINE: (431,5) cffts1(int, int, int, int, void *, void *)
+    -> INLINE: (444,11) ilog2(int)
+    -> INLINE: (446,23) timer_start(int)
+      -> INLINE: /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c:(49,16) elapsed_time(void)
+        -> INLINE: (22,5) wtime_(double *)
+    -> (456,7) cfftz(int, int, int, dcomplex (*)[*], dcomplex (*)[*])
+    -> (465,23) timer_stop(int)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(661,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(425,5)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+   remark #15523: loop was not vectorized: loop control variable lg was found, but loop iteration count cannot be computed before executing the loop
+   remark #25456: Number of Array Refs Scalar Replaced In Loop: 1
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(448,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(425,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed ANTI dependence between ty1[i][j] (452:23) and x1[k][j+jj][i] (460:30)
+
+   LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(449,5) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(425,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+      remark #15346: vector dependence: assumed ANTI dependence between ty1[i][j] (452:23) and x1[k][j+jj][i] (460:30)
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(450,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(425,5)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+         remark #15346: vector dependence: assumed FLOW dependence between ty1[i][j] (452:23) and ty1[i][j] (452:23)
+
+         LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(451,9) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(425,5)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+            remark #15346: vector dependence: assumed FLOW dependence between ty1[i][j] (452:23) and ty1[i][j] (452:23)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(458,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(425,5)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+         remark #15346: vector dependence: assumed FLOW dependence between x1[k][j+jj][i] (460:30) and x1[k][j+jj][i] (460:30)
+
+         LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(459,9) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(425,5)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+            remark #15346: vector dependence: assumed FLOW dependence between x1[k][j+jj][i] (460:30) and x1[k][j+jj][i] (460:30)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(661,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(426,5)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+   remark #15523: loop was not vectorized: loop control variable lg was found, but loop iteration count cannot be computed before executing the loop
+   remark #25456: Number of Array Refs Scalar Replaced In Loop: 1
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(481,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(426,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed ANTI dependence between ty1[j][i] (485:23) and x1[k][j][i+ii] (493:30)
+
+   LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(482,5) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(426,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+      remark #15346: vector dependence: assumed ANTI dependence between ty1[j][i] (485:23) and x1[k][j][i+ii] (493:30)
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(483,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(426,5)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+         remark #15346: vector dependence: assumed FLOW dependence between ty1[j][i] (485:23) and ty1[j][i] (485:23)
+
+         LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(484,9) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(426,5)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+            remark #15346: vector dependence: assumed FLOW dependence between ty1[j][i] (485:23) and ty1[j][i] (485:23)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(491,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(426,5)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+         remark #15346: vector dependence: assumed FLOW dependence between x1[k][j][i+ii] (493:30) and x1[k][j][i+ii] (493:30)
+
+         LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(492,9) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(426,5)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+            remark #15346: vector dependence: assumed FLOW dependence between x1[k][j][i+ii] (493:30) and x1[k][j][i+ii] (493:30)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(661,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(427,5)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+   remark #15523: loop was not vectorized: loop control variable lg was found, but loop iteration count cannot be computed before executing the loop
+   remark #25456: Number of Array Refs Scalar Replaced In Loop: 1
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(514,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(427,5)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed ANTI dependence between ty1[k][i] (518:23) and x2[k][j][i+ii] (526:30)
+
+   LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(515,5) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(427,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+      remark #15346: vector dependence: assumed ANTI dependence between ty1[k][i] (518:23) and x2[k][j][i+ii] (526:30)
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(516,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(427,5)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+         remark #15346: vector dependence: assumed FLOW dependence between ty1[k][i] (518:23) and ty1[k][i] (518:23)
+
+         LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(517,9) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(427,5)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+            remark #15346: vector dependence: assumed FLOW dependence between ty1[k][i] (518:23) and ty1[k][i] (518:23)
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(524,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(427,5)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+         remark #15346: vector dependence: assumed FLOW dependence between x2[k][j][i+ii] (526:30) and x2[k][j][i+ii] (526:30)
+
+         LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(525,9) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(427,5)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+            remark #15346: vector dependence: assumed FLOW dependence between x2[k][j][i+ii] (526:30) and x2[k][j][i+ii] (526:30)
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: fft_init(int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (fft_init(int)) [6] /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(539,1)
+  -> INLINE: (548,7) ilog2(int)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(661,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(548,7)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+   remark #15523: loop was not vectorized: loop control variable lg was found, but loop iteration count cannot be computed before executing the loop
+   remark #25456: Number of Array Refs Scalar Replaced In Loop: 1
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(553,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(556,5)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(556,5)
+      remark #17109: LOOP WAS AUTO-PARALLELIZED
+      remark #15300: LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(556,5)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(556,5)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(556,5)
+   remark #15300: LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(556,5)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================
+
+Begin optimization report for: compute_initial_conditions(void *, int, int, int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (compute_initial_conditions(void *, int, int, int)) [7] /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(240,1)
+  -> INLINE: (250,8) ipow46(double, int)
+    -> INLINE: (295,15) randlc(double *, double)
+    -> INLINE: (298,15) randlc(double *, double)
+    -> INLINE: (302,11) randlc(double *, double)
+  -> INLINE: (251,11) randlc(double *, double)
+  -> INLINE: (252,8) ipow46(double, int)
+    -> INLINE: (295,15) randlc(double *, double)
+    -> INLINE: (298,15) randlc(double *, double)
+    -> INLINE: (302,11) randlc(double *, double)
+  -> INLINE: (256,13) randlc(double *, double)
+  -> INLINE: (267,7) vranlc(int, double *, double, double *)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(292,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(252,8)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+   remark #15521: loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(255,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed ANTI dependence between start (57:3) and start (64:4)
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(264,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed OUTPUT dependence between y[i] (137:5) and y[i] (137:5)
+
+   LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(266,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+      remark #15346: vector dependence: assumed OUTPUT dependence between y[i] (137:5) and y[i] (137:5)
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/randdp.c(122,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(267,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+         remark #15346: vector dependence: assumed ANTI dependence between x0 (129:5) and x0 (136:6)
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: init_ui(void *, void *, void *, int, int, int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (init_ui(void *, void *, void *, int, int, int)) [8] /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(192,1)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(200,3)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed OUTPUT dependence between call:?1memset (203:9) and ot[k][j][i] (205:9)
+
+   LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(201,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+      remark #15346: vector dependence: assumed OUTPUT dependence between call:?1memset (203:9) and ot[k][j][i] (205:9)
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(202,7)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+         remark #15346: vector dependence: assumed OUTPUT dependence between call:?1memset (203:9) and ot[k][j][i] (205:9)
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: setup()
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (setup()) [9] /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(309,1)
+
+===========================================================================
+
+Begin optimization report for: main(int, char **)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (main(int, char **)) [10] /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(108,1)
+  -> INLINE: (121,5) timer_clear(int)
+  -> (123,3) setup()
+  -> (124,3) init_ui(void *, void *, void *, int, int, int)
+  -> INLINE: (125,3) compute_indexmap(void *, int, int, int)
+  -> (126,3) compute_initial_conditions(void *, int, int, int)
+  -> (127,3) fft_init(int)
+  -> CP_CLONE (128,3) fft..0(int, dcomplex *, dcomplex *)
+  -> INLINE: (135,5) timer_clear(int)
+  -> INLINE: (138,3) timer_start(int)
+    -> INLINE: /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c:(49,16) elapsed_time(void)
+      -> INLINE: (22,5) wtime_(double *)
+  -> INLINE: (139,23) timer_start(int)
+    -> INLINE: /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c:(49,16) elapsed_time(void)
+      -> INLINE: (22,5) wtime_(double *)
+  -> INLINE: (141,3) compute_indexmap(void *, int, int, int)
+  -> (143,3) compute_initial_conditions(void *, int, int, int)
+  -> (145,3) fft_init(int)
+  -> (147,23) timer_stop(int)
+  -> INLINE: (148,23) timer_start(int)
+    -> INLINE: /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c:(49,16) elapsed_time(void)
+      -> INLINE: (22,5) wtime_(double *)
+  -> CP_CLONE (149,3) fft..0(int, dcomplex *, dcomplex *)
+  -> (150,23) timer_stop(int)
+  -> INLINE: (153,25) timer_start(int)
+    -> INLINE: /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c:(49,16) elapsed_time(void)
+      -> INLINE: (22,5) wtime_(double *)
+  -> INLINE: (154,5) evolve(void *, void *, void *, int, int, int)
+  -> (155,25) timer_stop(int)
+  -> INLINE: (156,25) timer_start(int)
+    -> INLINE: /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c:(49,16) elapsed_time(void)
+      -> INLINE: (22,5) wtime_(double *)
+  -> CP_CLONE (158,5) fft..1(int, dcomplex *, dcomplex *)
+  -> (159,25) timer_stop(int)
+  -> INLINE: (160,25) timer_start(int)
+    -> INLINE: /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c:(49,16) elapsed_time(void)
+      -> INLINE: (22,5) wtime_(double *)
+  -> INLINE: (162,5) checksum(int, void *, int, int, int)
+  -> (163,25) timer_stop(int)
+  -> (166,3) verify(int, int, int, int, logical *, char *)
+  -> (168,3) timer_stop(int)
+  -> INLINE: (169,16) timer_read(int)
+  -> INLINE: (179,3) print_results(char *, char, int, int, int, int, double, double, char *, logical, char *, char *, char *, char *, char *, char *, char *, char *, char *)
+  -> INLINE: (182,23) print_timers()
+    -> INLINE: (406,9) timer_read(int)
+    -> INLINE: (409,9) timer_read(int)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(120,8)
+<Peeled loop for vectorization, Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(120,8)
+<Distributed chunk1>
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #25426: Loop Distributed (2 way) 
+   remark #15301: PARTIAL LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(120,8)
+<Remainder loop for vectorization, Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(120,8)
+<Distributed chunk2>
+   remark #15301: PARTIAL LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(377,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(125,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(380,5) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(125,3)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(383,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(125,3)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(383,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(125,3)
+         remark #15300: LOOP WAS VECTORIZED
+      LOOP END
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(383,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(125,3)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(134,8)
+<Peeled loop for vectorization, Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(134,8)
+<Distributed chunk1>
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #25426: Loop Distributed (2 way) 
+   remark #15301: PARTIAL LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(134,8)
+<Remainder loop for vectorization, Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(134,8)
+<Distributed chunk2>
+   remark #15301: PARTIAL LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(377,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(141,3)
+   remark #17109: LOOP WAS AUTO-PARALLELIZED
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(380,5) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(141,3)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(383,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(141,3)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(383,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(141,3)
+         remark #15300: LOOP WAS VECTORIZED
+      LOOP END
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(383,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(141,3)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(152,3)
+   remark #17102: loop was not parallelized: not a parallelization candidate
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(224,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(154,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+      remark #15346: vector dependence: assumed FLOW dependence between U33_V.U33_V (227:23) and U33_V (227:23)
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(225,5) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(154,5)
+         remark #17104: loop was not parallelized: existence of parallel dependence
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+         remark #15346: vector dependence: assumed FLOW dependence between U33_V.U33_V (227:23) and U33_V (227:23)
+
+         LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(226,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(154,5)
+            remark #17104: loop was not parallelized: existence of parallel dependence
+            remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+            remark #15346: vector dependence: assumed FLOW dependence between U33_V.U33_V (227:23) and U33_V (227:23)
+         LOOP END
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(681,5) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(162,5)
+      remark #17104: loop was not parallelized: existence of parallel dependence
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+      remark #15346: vector dependence: assumed ANTI dependence between my_chk.real (682:7) and my_chk.real (685:16)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(408,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(182,23)
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(120,8)
+<Distributed chunk1>
+   remark #25426: Loop Distributed (2 way) 
+   remark #15301: PARTIAL LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(120,8)
+<Remainder loop for vectorization, Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(120,8)
+<Distributed chunk2>
+   remark #15301: PARTIAL LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(120,8)
+<Remainder loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(377,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(125,3)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(380,5) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(125,3)
+      remark #17107: loop was not parallelized: inner loop
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(383,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(125,3)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(383,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(125,3)
+         remark #17107: loop was not parallelized: inner loop
+         remark #15300: LOOP WAS VECTORIZED
+      LOOP END
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(383,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(125,3)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(134,8)
+<Distributed chunk1>
+   remark #25426: Loop Distributed (2 way) 
+   remark #15301: PARTIAL LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(134,8)
+<Remainder loop for vectorization, Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(134,8)
+<Distributed chunk2>
+   remark #15301: PARTIAL LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(134,8)
+<Remainder loop for vectorization, Distributed chunk2>
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(377,3) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(141,3)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(380,5) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(141,3)
+      remark #17107: loop was not parallelized: inner loop
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(383,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(141,3)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(383,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(141,3)
+         remark #17107: loop was not parallelized: inner loop
+         remark #15300: LOOP WAS VECTORIZED
+      LOOP END
+
+      LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(383,7) inlined into /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(141,3)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: dcmplx_div(dcomplex, dcomplex)
+
+    Report from: Interprocedural optimizations [ipo]
+
+DEAD STATIC FUNCTION: (dcmplx_div(dcomplex, dcomplex)) /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/global.h(133,61)
+
+===========================================================================
+
+Begin optimization report for: randlc(double *, double)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (randlc(double *, double)) [12] /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/randdp.c(5,1)
+
+===========================================================================
+
+Begin optimization report for: vranlc(int, double *, double, double *)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (vranlc(int, double *, double, double *)) [13] /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/randdp.c(72,1)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/randdp.c(122,3)
+<Multiversioned v1>
+   remark #25228: Loop multiversioned for Data Dependence
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed ANTI dependence between *x (129:5) and *x (136:6)
+LOOP END
+
+LOOP BEGIN at /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/randdp.c(122,3)
+<Multiversioned v2>
+   remark #17104: loop was not parallelized: existence of parallel dependence
+   remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+LOOP END
+===========================================================================
+
+Begin optimization report for: timer_clear(int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (timer_clear(int)) [14] /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c(38,1)
+
+===========================================================================
+
+Begin optimization report for: timer_start(int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (timer_start(int)) [15] /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c(48,1)
+  -> INLINE: (49,16) elapsed_time(void)
+    -> INLINE: (22,5) wtime_(double *)
+
+===========================================================================
+
+Begin optimization report for: timer_read(int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (timer_read(int)) [16] /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c(72,1)
+
+===========================================================================
+
+Begin optimization report for: print_results(char *, char, int, int, int, int, double, double, char *, logical, char *, char *, char *, char *, char *, char *, char *, char *, char *)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (print_results(char *, char, int, int, int, int, double, double, char *, logical, char *, char *, char *, char *, char *, char *, char *, char *, char *)) [17] /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/print_results.c(14,1)
+
+===========================================================================
+
+Begin optimization report for: evolve(void *, void *, void *, int, int, int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+DEAD STATIC FUNCTION: (evolve(void *, void *, void *, int, int, int)) /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(216,1)
+
+===========================================================================
+
+Begin optimization report for: ipow46(double, int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+DEAD STATIC FUNCTION: (ipow46(double, int)) /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(277,1)
+
+===========================================================================
+
+Begin optimization report for: compute_indexmap(void *, int, int, int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+DEAD STATIC FUNCTION: (compute_indexmap(void *, int, int, int)) /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(359,1)
+
+===========================================================================
+
+Begin optimization report for: print_timers()
+
+    Report from: Interprocedural optimizations [ipo]
+
+DEAD STATIC FUNCTION: (print_timers()) /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(393,1)
+
+===========================================================================
+
+Begin optimization report for: fft(int, dcomplex *, dcomplex *)
+
+    Report from: Interprocedural optimizations [ipo]
+
+DEAD STATIC FUNCTION: (fft(int, dcomplex *, dcomplex *)) /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(423,1)
+
+===========================================================================
+
+Begin optimization report for: cffts1(int, int, int, int, void *, void *)
+
+    Report from: Interprocedural optimizations [ipo]
+
+DEAD STATIC FUNCTION: (cffts1(int, int, int, int, void *, void *)) /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(437,1)
+
+===========================================================================
+
+Begin optimization report for: cffts2(int, int, int, int, void *, void *)
+
+    Report from: Interprocedural optimizations [ipo]
+
+DEAD STATIC FUNCTION: (cffts2(int, int, int, int, void *, void *)) /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(470,1)
+
+===========================================================================
+
+Begin optimization report for: cffts3(int, int, int, int, void *, void *)
+
+    Report from: Interprocedural optimizations [ipo]
+
+DEAD STATIC FUNCTION: (cffts3(int, int, int, int, void *, void *)) /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(503,1)
+
+===========================================================================
+
+Begin optimization report for: fftz2(int, int, int, int, int, int, dcomplex *, dcomplex (*)[*], dcomplex (*)[*])
+
+    Report from: Interprocedural optimizations [ipo]
+
+DEAD STATIC FUNCTION: (fftz2(int, int, int, int, int, int, dcomplex *, dcomplex (*)[*], dcomplex (*)[*])) /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(616,1)
+
+===========================================================================
+
+Begin optimization report for: ilog2(int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+DEAD STATIC FUNCTION: (ilog2(int)) /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(656,1)
+
+===========================================================================
+
+Begin optimization report for: checksum(int, void *, int, int, int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+DEAD STATIC FUNCTION: (checksum(int, void *, int, int, int)) /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/FT/src/ft.c(670,1)
+
+===========================================================================
+
+Begin optimization report for: c_print_results(char *, char, int, int, int, int, double, double, char *, int, char *, char *, char *, char *, char *, char *, char *, char *)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (c_print_results(char *, char, int, int, int, int, double, double, char *, int, char *, char *, char *, char *, char *, char *, char *, char *)) [29] /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_print_results.c(28,1)
+
+===========================================================================
+
+Begin optimization report for: wtime_(double *)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (wtime_(double *)) [30] /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/wtime.c(8,1)
+
+===========================================================================
+
+Begin optimization report for: elapsed_time(void)
+
+    Report from: Interprocedural optimizations [ipo]
+
+DEAD STATIC FUNCTION: (elapsed_time(void)) /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c(15,1)
+
+===========================================================================
+
+Begin optimization report for: timer_count(int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (timer_count(int)) [32] /home/s1736883/Work/PParMetrics/benchmarks/snu-npb/nauseous-omp/common/c_timers.c(77,1)
+
+===========================================================================
