@@ -1,0 +1,249 @@
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/MG/src/mg.c:499:  #pragma omp parallel for default(shared) private(i1,i2,i3,r1,r2)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/MG/src/mg.c:562:  #pragma omp parallel for default(shared) private(i1,i2,i3,u1,u2)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/MG/src/mg.c:640:  #pragma omp parallel for default(shared) \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/MG/src/mg.c:710:    #pragma omp parallel for default(shared) private(i1,i2,i3,z1,z2,z3)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/MG/src/mg.c:1000:  #pragma omp parallel for default(shared) private(i2,i3,x1,xx,rdummy) \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/MG/src/mg.c:1156:  #pragma omp parallel for default(shared) private(i1,i2,i3)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/MG/src/mg.c:1292:  #pragma omp parallel for default(shared) private(i1,i2,i3)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.orig:494:    #pragma omp parallel for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.orig:531:    #pragma omp parallel for private(i,j,k,k1) schedule(static,1)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.orig:533:    #pragma omp parallel for private(i,j,k,k1) schedule(dynamic)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.orig:574:    #pragma omp parallel for reduction(+:j)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.test:504:    #pragma omp parallel for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.test:542:    #pragma omp parallel for private(i,j,k,k1) schedule(static,1)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.test:544:    #pragma omp parallel for private(i,j,k,k1) schedule(dynamic)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.test:587:    #pragma omp parallel for reduction(+:j)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c:494:    #pragma omp parallel for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c:531:    #pragma omp parallel for private(i,j,k,k1) schedule(static,1)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c:533:    #pragma omp parallel for private(i,j,k,k1) schedule(dynamic)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c:574:    #pragma omp parallel for reduction(+:j)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/CG/src/cg.c:286:    #pragma omp parallel for default(shared) private(j) \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/CG/src/cg.c:298:    #pragma omp parallel for default(shared) private(j)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/CG/src/cg.c:308:  #pragma omp parallel for default(shared) private(i)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/CG/src/cg.c:342:    #pragma omp parallel for default(shared) private(j) \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/CG/src/cg.c:359:    #pragma omp parallel for default(shared) private(j)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/adapt.c:112:  #pragma omp parallel for default(shared) private(iel)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/adapt.c:148:  #pragma omp parallel for default(shared) private(miel,iel)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/adapt.c:202:  #pragma omp parallel for default(shared) private(miel,iel,ic, \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/adapt.c:285:  #pragma omp parallel for default(shared) private(miel,iel,mielnew)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/adapt.c:300:  #pragma omp parallel for default(shared) private(index,miel,iel,ntp)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/adapt.c:337:  #pragma omp parallel for default(shared) private(miel)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/adapt.c:357:  #pragma omp parallel for default(shared) private(miel,iel)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/adapt.c:368:  #pragma omp parallel for default(shared) private(miel,iel,ntemp,mielnew)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/adapt.c:395:  #pragma omp parallel for default(shared) private(index,miel,mielnew,iel, \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/adapt.c:735:  #pragma omp parallel for default(shared) private(iel,i,iftemp) \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/adapt.c:769:  #pragma omp parallel for default(shared) private(iel) shared(if_refine)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/adapt.c:794:  #pragma omp parallel for default(shared) private(iel,i,jface,ntemp, \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/precond.c:61:  #pragma omp parallel for default(shared) private(ie,isize,i,j,k,q) 
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/precond.c:89:  #pragma omp parallel for default(shared) private(i)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/precond.c:132:  #pragma omp parallel for default(shared) private(element_size,i,j,p,temp, \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/precond.c:458:  #pragma omp parallel for default(shared) private(iel,iside,sizei, \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/utils.c:44:  #pragma omp parallel for default(shared) private(i)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/utils.c:58:  #pragma omp parallel for default(shared) private(i)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/utils.c:85:  #pragma omp parallel for default(shared) private(i)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/utils.c:112:  #pragma omp parallel for default(shared) private(i)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/utils.c:164:  #pragma omp parallel for default(shared) private(i)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/utils.c:177:  #pragma omp parallel for default(shared) private(i)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/utils.c:191:  #pragma omp parallel for default(shared) private(i)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/utils.c:217:  #pragma omp parallel for default(shared) private(i)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/utils.c:234:  #pragma omp parallel for default(shared) private(i,j,k,isize,ieltotal,iel) \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/utils.c:272:    #pragma omp parallel for default(shared) private(ahead,ii,iel)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/utils.c:284:      #pragma omp parallel for default(shared) private(ii)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/diffuse.c:56:  #pragma omp parallel for default(shared) private(i)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/diffuse.c:136:    #pragma omp parallel for default(shared) private(ie) 
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/diffuse.c:148:    #pragma omp parallel for default(shared) private(ie,iside)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/ua.c:397:    #pragma omp parallel for default(shared) private(ie,iside)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/setup.c:241:  #pragma omp parallel for default(shared) private(isize,temp,temp1,temp2, \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/setup.c:264:  #pragma omp parallel for default(shared) private(ntemp,i,j,iel)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/transfer_au.c:47:  #pragma omp parallel for default(shared) private(i)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/transfer_au.c:66:  #pragma omp parallel for default(shared) private(il,j,ig,i,col,ije2,ije1, \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/transfer.c:45:  #pragma omp parallel for default(shared) private(i)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/transfer.c:64:  #pragma omp parallel for default(shared) private(il,j,ig,i,col,ije2,ije1, \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/mason.c:81:  #pragma omp parallel for default(shared) private(iel,sumcb,ij1,ij2, \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/mason.c:751:  #pragma omp parallel for default(shared) private(iel)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/mason.c:763:  #pragma omp parallel for default(shared) private(iel,i,count)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/mason.c:810:  #pragma omp parallel for default(shared) private(iel,cb1,cb2,cb3,cb4,cb5 \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/mason.c:1353:  #pragma omp parallel for default(shared) private(iel)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/mason.c:1366:  #pragma omp parallel for default(shared) private(iel,count,i,cb1,ne, \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/mason.c:1484:  #pragma omp parallel for default(shared) \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/convect.c:71:  #pragma omp parallel for default(shared) private(rk4,rk3,rk2,temp,rk1,dtx3,\
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/convect.c:246:  #pragma omp parallel for default(shared) private(i)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/x_solve.c:71:  #pragma omp parallel for default(shared) shared(isize) private(i,j,k,m,n)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/add.c:46:  #pragma omp parallel for default(shared) private(i,j,k,m)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/y_solve.c:70:  #pragma omp parallel for default(shared) shared(jsize) private(i,j,k,m,n)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/z_solve.c:70:  #pragma omp parallel for default(shared) shared(ksize) private(i,j,k,m,n)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/FT/src/ft.c:199:  #pragma omp parallel for default(shared) private(i,j,k)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/FT/src/ft.c:223:  #pragma omp parallel for default(shared) private(i,j,k)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/FT/src/ft.c:263:  #pragma omp parallel for default(shared) private(k,j,x0)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/FT/src/ft.c:376:  #pragma omp parallel for default(shared) private(i,j,k,kk,kk2,jj,kj2,ii)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/FT/src/ft.c:447:  #pragma omp parallel for default(shared) private(i,j,k,jj)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/FT/src/ft.c:480:  #pragma omp parallel for default(shared) private(i,j,k,ii)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/FT/src/ft.c:513:  #pragma omp parallel for default(shared) private(i,j,k,ii)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/setiv.c:54:  #pragma omp parallel for default(shared) private(i,j,k,m,pxi,peta,pzeta, \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/x_solve.c:49:  #pragma omp parallel for default(shared) private(i,j,k,i1,i2,m, \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/pinvr.c:46:  #pragma omp parallel for default(shared) private(i,j,k,r1,r2,r3,r4,r5,t1,t2)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/ninvr.c:46:  #pragma omp parallel for default(shared) private(i,j,k,r1,r2,r3,r4,r5,t1,t2)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/add.c:45:  #pragma omp parallel for default(shared) private(i,j,k,m)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/y_solve.c:49:  #pragma omp parallel for default(shared) private(i,j,k,j1,j2,m, \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/z_solve.c:53:  #pragma omp parallel for default(shared) private(i,j,k,k1,k2,m, \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/txinvr.c:46:  #pragma omp parallel for default(shared) \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/tzetar.c:47:  #pragma omp parallel for default(shared) \
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/MG/src/mg.c:772:    #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/MG/src/mg.c:801:    #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/MG/src/mg.c:875:    #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/MG/src/mg.c:923:  #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/MG/src/mg.c:938:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/MG/src/mg.c:1033:  #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/MG/src/mg.c:1075:    #pragma omp for ordered schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.orig:548:    #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.orig:648:    #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.orig:668:    #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.orig:689:    #pragma omp for schedule(static,1)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.orig:691:    #pragma omp for schedule(dynamic)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.orig:737:    #pragma omp for nowait schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.orig:752:        #pragma omp for nowait schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.test:560:    #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.test:667:    #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.test:692:    #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.test:719:    #pragma omp for schedule(static,1)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.test:721:    #pragma omp for schedule(dynamic)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.test:770:    #pragma omp for nowait schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c.test:785:        #pragma omp for nowait schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c:548:    #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c:648:    #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c:668:    #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c:689:    #pragma omp for schedule(static,1)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c:691:    #pragma omp for schedule(dynamic)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c:737:    #pragma omp for nowait schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/IS/src/is.c:752:        #pragma omp for nowait schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/CG/src/cg.c:242:    #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/CG/src/cg.c:252:    #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/CG/src/cg.c:256:    #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/CG/src/cg.c:462:  #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/CG/src/cg.c:474:  #pragma omp for reduction(+:rho)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/CG/src/cg.c:508:    #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/CG/src/cg.c:558:    #pragma omp for reduction(+:d)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/CG/src/cg.c:572:    #pragma omp for reduction(+:rho)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/CG/src/cg.c:592:    #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/CG/src/cg.c:603:  #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/CG/src/cg.c:615:  #pragma omp for reduction(+:sum) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/CG/src/cg.c:917:  #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/CG/src/cg.c:932:  #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/adapt.c:189:    #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/adapt.c:194:    #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/precond.c:443:    #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/precond.c:448:    #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/move.c:53:  #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/move.c:102:  #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/diffuse.c:69:  #pragma omp for nowait 
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/diffuse.c:82:  #pragma omp for nowait 
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/diffuse.c:100:      #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/diffuse.c:113:      #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/diffuse.c:162:    #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/diffuse.c:174:    #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/ua.c:372:    #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/ua.c:378:    #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/setup.c:317:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/setup.c:323:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/setup.c:332:  #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/setup.c:337:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/transfer_au.c:289:  #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/transfer_au.c:294:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/transfer_au.c:829:  #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/transfer_au.c:834:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/transfer_au.c:930:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/transfer_au.c:934:  #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/transfer_au.c:939:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/transfer.c:287:  #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/transfer.c:292:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/transfer.c:844:  #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/transfer.c:849:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/transfer.c:954:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/transfer.c:958:  #pragma omp for
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/UA/src/transfer.c:963:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/exact_rhs.c:51:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/exact_rhs.c:65:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/exact_rhs.c:161:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/exact_rhs.c:257:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/exact_rhs.c:354:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/error.c:58:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/error.c:105:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/rhs.c:51:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/rhs.c:74:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/rhs.c:90:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/rhs.c:201:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/rhs.c:311:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/rhs.c:368:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/rhs.c:380:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/rhs.c:391:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/rhs.c:406:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/rhs.c:418:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/rhs.c:431:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/initialize.c:55:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/initialize.c:69:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/initialize.c:111:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/initialize.c:128:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/initialize.c:145:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/initialize.c:162:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/initialize.c:179:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/BT/src/initialize.c:196:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/FT/src/ft.c:680:    #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/EP/src/ep.c:183:    #pragma omp for reduction(+:sx,sy) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/ssor.c:77:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/ssor.c:90:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/ssor.c:141:    #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/ssor.c:224:    #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/pintgr.c:63:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/pintgr.c:87:  #pragma omp for reduction(+:frc1)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/pintgr.c:104:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/pintgr.c:115:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/pintgr.c:129:  #pragma omp for reduction(+:frc2)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/pintgr.c:146:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/pintgr.c:157:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/pintgr.c:171:  #pragma omp for reduction(+:frc3)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/error.c:63:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/jacld.c:55:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/setbv.c:54:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/setbv.c:69:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/setbv.c:84:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/rhs.c:63:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/rhs.c:85:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/rhs.c:210:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/rhs.c:343:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/jacu.c:55:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/blts.c:69:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/blts.c:84:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/l2norm.c:64:  #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/buts.c:67:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/buts.c:81:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/erhs.c:64:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/erhs.c:75:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/erhs.c:104:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/erhs.c:222:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/LU/src/erhs.c:341:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/exact_rhs.c:51:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/exact_rhs.c:65:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/exact_rhs.c:160:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/exact_rhs.c:255:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/exact_rhs.c:351:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/error.c:58:    #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/error.c:105:    #pragma omp for nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/rhs.c:51:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/rhs.c:79:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/rhs.c:95:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/rhs.c:189:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/rhs.c:287:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/rhs.c:333:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/rhs.c:344:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/rhs.c:355:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/rhs.c:370:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/rhs.c:382:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/rhs.c:394:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/initialize.c:55:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/initialize.c:71:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/initialize.c:117:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/initialize.c:134:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/initialize.c:151:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/initialize.c:168:  #pragma omp for schedule(static)
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/initialize.c:185:  #pragma omp for schedule(static) nowait
+/home/s1736883/Work/PParMetrics/benchmarks/snu-npb/SNU_NPB/NPB3.3-OMP-C/SP/src/initialize.c:202:  #pragma omp for schedule(static) nowait
